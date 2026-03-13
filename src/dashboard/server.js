@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { loadConfig, saveConfig } from '../cli/utils/config.js';
-import { listMissions, getMissionStats } from '../engine/mission-runner.js';
+import { listMissions, getMissionStats, getMissionTrail } from '../engine/mission-runner.js';
 import { getTotal, getMonthly, getWeekly, getToday, getHistory, getByService, getDailyTotals } from '../engine/earnings-tracker.js';
 import { listInstalledSkills, listAvailableSkills } from '../integrations/openclaw-bridge.js';
 
@@ -208,11 +208,24 @@ export function createDashboardServer() {
   });
 
   /**
+   * GET /api/missions/:id/trail
+   * Returns the audit trail for a specific mission.
+   */
+  app.get('/api/missions/:id/trail', async (req, res) => {
+    try {
+      const trail = await getMissionTrail(req.params.id);
+      res.json(trail);
+    } catch (err) {
+      res.status(404).json({ error: { code: 'NOT_FOUND', message: err.message } });
+    }
+  });
+
+  /**
    * GET /api/health
    * Simple health check endpoint.
    */
   app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', version: '1.0.0', timestamp: new Date().toISOString() });
+    res.json({ status: 'ok', version: '1.1.0', timestamp: new Date().toISOString() });
   });
 
   // Fallback: serve index.html for SPA routing

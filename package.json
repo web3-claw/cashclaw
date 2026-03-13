@@ -1,7 +1,7 @@
 {
   "name": "cashclaw",
-  "version": "1.0.2",
-  "description": "Turn your OpenClaw into a money-making machine",
+  "version": "1.1.0",
+  "description": "Turn your OpenClaw AI agent into a money-making machine — with mission audit trails",
   "type": "module",
   "bin": {
     "cashclaw": "./bin/cashclaw.js"

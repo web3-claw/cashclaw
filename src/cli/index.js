@@ -5,7 +5,7 @@ import { loadConfig, saveConfig } from './utils/config.js';
 import { runInit } from './commands/init.js';
 import { runStatus } from './commands/status.js';
 import { runDashboard } from './commands/dashboard.js';
-import { listMissions, createMission, startMission, completeMission, cancelMission, getMission } from '../engine/mission-runner.js';
+import { listMissions, createMission, startMission, completeMission, cancelMission, getMission, getMissionTrail, exportMissionProof } from '../engine/mission-runner.js';
 import { getTotal, getMonthly, getWeekly, getToday, getHistory, getByService } from '../engine/earnings-tracker.js';
 import { listInstalledSkills, listAvailableSkills, installSkills } from '../integrations/openclaw-bridge.js';
 import Table from 'cli-table3';
@@ -231,6 +231,76 @@ missionsCmd
         }
       }
       console.log();
+    } catch (err) {
+      console.error(chalk.red(`  Error: ${err.message}\n`));
+    }
+  });
+
+missionsCmd
+  .command('trail <id>')
+  .description('Show mission audit trail')
+  .action(async (id) => {
+    showMiniBanner();
+    try {
+      const fullId = await resolveShortId(id);
+      const trail = await getMissionTrail(fullId);
+
+      console.log(orange.bold(`  ${trail.name}\n`));
+      console.log(`  ${dim('ID:')}      ${trail.id}`);
+      console.log(`  ${dim('Status:')}  ${trail.status}`);
+      console.log(`  ${dim('Price:')}   $${trail.price_usd}`);
+      console.log(`  ${dim('Client:')}  ${trail.client?.name || '-'}`);
+
+      if (trail.steps?.length > 0) {
+        console.log(`\n  ${dim('Steps:')}`);
+        for (const step of trail.steps) {
+          const icon = step.status === 'completed' ? green('✓') : dim('○');
+          const time = step.completed_at ? dim(` (${new Date(step.completed_at).toLocaleTimeString()})`) : '';
+          console.log(`    ${icon} ${step.description}${time}`);
+        }
+      }
+
+      if (trail.trail.length > 0) {
+        console.log(`\n  ${dim('Audit Trail:')}`);
+
+        const trailTable = new Table({
+          head: [dim('Time'), dim('Action'), dim('Details')],
+          colWidths: [22, 20, 40],
+          style: { head: [] },
+        });
+
+        for (const entry of trail.trail) {
+          trailTable.push([
+            new Date(entry.timestamp).toLocaleString(),
+            entry.action,
+            entry.details,
+          ]);
+        }
+
+        console.log(trailTable.toString());
+      } else {
+        console.log(dim('\n  No audit trail entries.\n'));
+      }
+      console.log();
+    } catch (err) {
+      console.error(chalk.red(`  Error: ${err.message}\n`));
+    }
+  });
+
+missionsCmd
+  .command('export <id>')
+  .description('Export mission proof as markdown')
+  .option('-o, --output <file>', 'Output file path')
+  .action(async (id, options) => {
+    showMiniBanner();
+    try {
+      const fullId = await resolveShortId(id);
+      const markdown = await exportMissionProof(fullId);
+
+      const outputFile = options.output || `mission-proof-${id.slice(0, 8)}.md`;
+      await fs.writeFile(outputFile, markdown, 'utf-8');
+
+      console.log(green(`  Mission proof exported to ${outputFile}\n`));
     } catch (err) {
       console.error(chalk.red(`  Error: ${err.message}\n`));
     }
