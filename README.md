@@ -331,6 +331,15 @@ CashClaw is open source. PRs are welcome.
 4. Add tests
 5. Submit a PR
 
+## Contributors
+
+Thanks to everyone who helps make CashClaw better:
+
+- [Ertugrul Akben](https://github.com/ertugrulakben) — Creator & maintainer
+- [Varad Thokal](https://github.com/varadfromeast) — Port auto-increment fix ([#2](https://github.com/ertugrulakben/cashclaw/pull/2))
+
+Want to see your name here? Check [Contributing](#contributing) above.
+
 ## License
 
 [MIT](LICENSE) -- Use it, fork it, make money with it.
