@@ -9,7 +9,10 @@
   "main": "./src/cli/index.js",
   "scripts": {
     "start": "node bin/cashclaw.js",
-    "test": "node tests/cli.test.js"
+    "test": "node --test tests/cli.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "commander": "^12.0.0",
