@@ -1,225 +1,244 @@
 <p align="center">
-  <img src="cover.jpeg" alt="CashClaw - AI Agent Workforce for Local Businesses" width="100%" />
+  <img src="cover.jpeg" alt="CashClaw - Sell AI Agents to Local Businesses" width="100%" />
 </p>
 
 <p align="center">
   <a href="#what-is-cashclaw">What is CashClaw?</a> &middot;
-  <a href="#quick-start">Quick Start</a> &middot;
   <a href="#how-it-works">How It Works</a> &middot;
-  <a href="#service-tiers">Tiers</a> &middot;
-  <a href="#target-niches">Niches</a> &middot;
-  <a href="#dashboard">Dashboard</a> &middot;
-  <a href="#commands">Commands</a>
+  <a href="#what-you-sell">What You Sell</a> &middot;
+  <a href="#pricing--your-profit">Pricing</a> &middot;
+  <a href="#target-industries">Industries</a> &middot;
+  <a href="#getting-started">Get Started</a> &middot;
+  <a href="#faq">FAQ</a>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/cashclaw"><img src="https://img.shields.io/npm/v/cashclaw?color=crimson&label=npm" alt="npm version" /></a>
-  <a href="https://github.com/web3-claw/cashclaw/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="license" /></a>
-  <a href="https://github.com/web3-claw/cashclaw/stargazers"><img src="https://img.shields.io/github/stars/web3-claw/cashclaw?style=social" alt="stars" /></a>
+  <a href="https://web3sonic.com/ai-workforce"><img src="https://img.shields.io/badge/Get%20Started-web3sonic.com-crimson?style=for-the-badge" alt="Get Started" /></a>
 </p>
 
 ---
 
-> *"We deployed CashClaw on Monday. By Friday, we had 3 demos booked and closed our first $597/mo client."*
+> *"I signed up on Monday. By Friday, I had 3 demos booked and closed my first $597/mo client. I keep every dollar."*
 
 ---
 
 ## What is CashClaw?
 
-CashClaw is a set of **OpenClaw skills** that turn your AI agent into a **local business sales machine**.
+CashClaw is a **done-for-you AI agent platform** that lets you sell AI-powered employees to local businesses — and **keep 100% of the profit**.
 
-Your agent finds local businesses that need AI. Sends personalized outreach. Books demos. Closes deals. Deploys AI agents for clients. Collects payment. Manages recurring subscriptions. Sends performance reports. Upsells. Handles support.
+We give you the AI agents. You sell them to businesses in your area. You set your own prices. You keep everything you charge.
 
-**You build the machine once. CashClaw sells for you.**
+**No coding. No technical skills. No revenue sharing.**
 
-It is not a SaaS. It is not a dashboard. It is a skill pack that plugs into any OpenClaw-compatible agent and gives it the ability to **prospect, sell, deploy, and manage AI agent workforces** for local businesses — autonomously.
+You are the business owner. We are the technology behind you.
+
+---
+
+## How It Works
+
+### 1. You Sign Up
+
+Join the CashClaw platform at [web3sonic.com/ai-workforce](https://web3sonic.com/ai-workforce). You get access to our full suite of AI agents, sales tools, outreach templates, and a dashboard to manage your clients.
+
+### 2. You Find Local Businesses
+
+Every local business has the same problem: they miss calls, lose leads, and can't respond fast enough. You reach out to them with our proven templates — or find them yourself. We give you:
+
+- **Niche-specific outreach scripts** (dental, real estate, law firms, HVAC, gyms, and more)
+- **Lead scoring tools** to find the businesses that need AI the most
+- **Demo builders** so prospects can see the AI agent working for *their* business in real time
+
+### 3. You Close the Deal
+
+You set your own prices. Charge a setup fee. Charge monthly. Bundle services. Offer discounts. It's your business — run it however you want.
+
+**Suggested pricing** (adjust up or down based on your market):
+
+| Tier | Setup Fee | Monthly | What the Client Gets |
+|------|-----------|---------|---------------------|
+| **Starter** | $199 | $297/mo | 1 AI agent, 1 channel (web chat or WhatsApp), lead capture, auto-responses, FAQ handling |
+| **Pro** | $499 | $597/mo | 2 AI agents, multi-channel (web + WhatsApp + SMS), appointment booking, CRM integration, follow-ups, weekly reports |
+| **Enterprise** | $999 | $997/mo | Unlimited agents, all channels, custom workflows, priority support, white-label option |
+
+### 4. We Deploy the AI Agent
+
+Once your client pays, we deploy their AI agent within 24 hours. We handle:
+
+- Configuration and training on the client's business
+- Channel setup (website chat widget, WhatsApp, SMS, email)
+- Integration with their existing tools (calendars, CRMs, etc.)
+- Testing and quality assurance
+- Ongoing monitoring and updates
+
+**You don't touch any of the tech. We do it all.**
+
+### 5. You Get Paid Every Month
+
+Your client pays you monthly. You keep 100%. We charge a flat platform fee — that's it. No percentage cuts. No hidden fees. No surprises.
+
+---
+
+## What You Sell
+
+You're selling **AI employees** that work 24/7 for local businesses. Here's what they do:
+
+**Answer Every Call & Message** — Your client's AI agent responds instantly to website visitors, WhatsApp messages, SMS, and email. No more missed leads. No more "sorry we missed your call."
+
+**Book Appointments Automatically** — The AI checks the client's calendar, finds available slots, and books appointments without any human involvement.
+
+**Qualify Leads** — The AI asks the right questions, scores leads, and sends the hot ones straight to the business owner's phone.
+
+**Follow Up Relentlessly** — Day 1, Day 3, Day 7, Day 14, Day 30. The AI never forgets to follow up. No lead falls through the cracks.
+
+**Answer FAQs** — Pricing questions, hours, services, insurance — the AI handles it all instantly, 24/7.
+
+**Send Reports** — Weekly and monthly performance reports so your client can see exactly how many leads, appointments, and conversations the AI handled.
+
+---
+
+## Pricing & Your Profit
+
+**You keep 100% of what you charge your clients.** Hardware and/or VPS hosting are not included — you'll need your own server or cloud hosting to run the agents.
+
+Here's what the math looks like:
 
 ```
-No cold calling. No manual demos. No invoicing headaches.
-Just an agent, a Stripe account, and CashClaw.
+5 clients  x $597/mo = $2,985/mo  = $35,820/year
+10 clients x $597/mo = $5,970/mo  = $71,640/year
+20 clients x $597/mo = $11,940/mo = $143,280/year
 ```
 
-## Quick Start
+Most CashClaw partners start with 2-3 clients in their first month and scale from there.
+
+### What You Need
+
+| Item | Details |
+|------|---------|
+| **CashClaw Platform Access** | Sign up at [web3sonic.com/ai-workforce](https://web3sonic.com/ai-workforce) |
+| **Your Own Server (VPS) or Hardware** | To host the AI agents — not included in platform fee |
+| **Stripe Account** | To collect payments from your clients (free to create) |
+| **Time & Hustle** | Outreach, demos, and client management are on you |
+
+---
+
+## Target Industries
+
+These are the highest-converting niches for AI agents. Each one has a specific pain point that AI solves immediately:
+
+| Industry | The Problem | Why AI Fixes It |
+|----------|------------|-----------------|
+| **Dental Offices** | Missed calls, appointment no-shows, insurance questions | AI books appointments 24/7, sends reminders, answers insurance FAQs |
+| **Real Estate Agents** | 78% of leads go to the first responder — most agents respond in 6+ hours | AI responds in seconds, qualifies buyers, books showings |
+| **Med Spas & Clinics** | Can't book consultations at 9pm, high-value clients lost to competitors | AI captures after-hours leads, books consultations, sends prep info |
+| **Roofing & HVAC** | On job sites all day, miss every call, "never called back" reviews | AI answers every call, schedules estimates, follows up |
+| **Law Firms** | Every missed intake call = lost case worth $5K-$50K | AI does intake 24/7, qualifies cases, routes to attorneys |
+| **Gyms & Studios** | 67% of membership inquiries die in the inbox within 4 hours | AI responds instantly, books tours, handles pricing questions |
+| **Auto Dealers** | High volume inquiries, test drive booking, follow-up critical | AI qualifies buyers, books test drives, sends inventory matches |
+| **Insurance Agencies** | Quote requests come in 24/7, policy questions never stop | AI runs quote intake, answers policy questions, schedules calls |
+
+**Pick one niche. Master it. Then expand.**
+
+---
+
+## Getting Started
+
+### Step 1: Sign Up
+
+Go to [web3sonic.com/ai-workforce](https://web3sonic.com/ai-workforce) and create your CashClaw account.
+
+### Step 2: Set Up Your Server
+
+You'll need a VPS (Virtual Private Server) or your own hardware to host the AI agents. We recommend:
+
+- **Minimum**: 4 GB RAM, 2 vCPU, 50 GB storage
+- **Recommended**: 8 GB RAM, 4 vCPU, 100 GB storage (handles 10+ clients)
+- **Providers**: Any VPS provider works — Hetzner, DigitalOcean, Vultr, OVH, or your own hardware
+
+### Step 3: Install CashClaw
 
 ```bash
 npx cashclaw init
 ```
 
-CashClaw will:
+The setup wizard walks you through everything:
+- Connects to your server
+- Sets up the AI agent infrastructure
+- Connects your Stripe account for billing
+- Installs outreach templates and sales tools
+- Launches your client management dashboard
 
-1. Create your `~/.cashclaw/` workspace
-2. Set up the sales pipeline
-3. Connect to Stripe (optional, add later)
-4. Install all 7 skills into your OpenClaw agent
-5. Print your first dashboard
+### Step 4: Start Selling
 
-```bash
-# Or install globally
-npm install -g cashclaw
-cashclaw init
-```
+Use our outreach templates to contact local businesses. Book demos. Close deals. We deploy the AI agents — you collect the checks.
 
-## How It Works
+---
 
-### The Sales Pipeline
+## What's Included
 
-```
-PROSPECT → OUTREACH → DEMO → QUOTE → ACCEPT → DEPLOY → ONBOARD → RETAIN
-```
+| Feature | Details |
+|---------|---------|
+| **AI Agent Deployment** | We configure and deploy agents for each of your clients |
+| **7 Built-In Skills** | Lead finding, outreach, demo building, agent deployment, monitoring, support, invoicing |
+| **Niche Outreach Templates** | Proven sales scripts for 8+ industries |
+| **Client Dashboard** | Track your pipeline, MRR, active clients, and performance |
+| **Sales Pipeline Automation** | From prospect to paying client — tracked and managed |
+| **Performance Reports** | Auto-generated reports you can white-label and send to clients |
+| **Stripe Integration** | Automated billing, setup fees, recurring subscriptions |
+| **Ongoing Agent Monitoring** | We monitor agent health, uptime, and response quality |
 
-1. **Prospect**: CashClaw finds local businesses that need AI agents (no chatbot, slow response, phone-only contact)
-2. **Outreach**: Sends personalized sales messages with niche-specific pain points
-3. **Demo**: Builds a live demo tailored to the prospect's business
-4. **Quote**: Sends a professional proposal with ROI projection
-5. **Accept**: Collects payment via Stripe (setup fee + first month)
-6. **Deploy**: Configures and deploys AI agents for the client's business
-7. **Onboard**: Walks client through their new AI agent, monitors first week
-8. **Retain**: Monthly performance reports, recurring billing, upsells
+---
 
-### Revenue Model
+## FAQ
 
-| What | Amount |
-|------|--------|
-| Starter Setup Fee | $199 (one-time) |
-| Starter Monthly | $297/mo |
-| Pro Setup Fee | $499 (one-time) |
-| Pro Monthly | $597/mo |
-| Enterprise Setup Fee | $999 (one-time) |
-| Enterprise Monthly | $997/mo |
-| Reseller Setup Fee | $1,499 (one-time) |
-| Reseller Monthly | $1,497/mo |
+### Do I need to be technical?
+No. You sell and manage client relationships. We handle all the technical deployment, configuration, and maintenance. You just need a VPS or server to host the agents.
 
-**5 Pro clients = $2,985 MRR = $35,820/year**
+### What does "100% profit" mean?
+You set your own prices and keep everything your clients pay you. We charge a flat platform fee for the tools and infrastructure — no percentage cuts on your client revenue.
 
-## Service Tiers
+### What's not included?
+Hardware and/or VPS hosting. You need your own server to run the AI agents. This typically costs $5-50/month depending on how many clients you serve.
 
-### Starter — $297/mo
-- 1 AI agent
-- 1 channel (web chat OR WhatsApp)
-- Lead capture & auto-responses
-- Basic FAQ handling
-- Email notifications for new leads
+### How fast can I start making money?
+Most partners book their first demo within the first week. If you do outreach daily, expect 2-3 paying clients in your first month.
 
-### Pro — $597/mo
-- 2 AI agents
-- Multi-channel (web + WhatsApp + SMS)
-- Appointment booking
-- CRM integration
-- Follow-up sequences
-- Weekly performance reports
+### Can I white-label this?
+Yes. Your clients never see "CashClaw" or "Web3Sonic." The AI agents appear as your own product. You are the brand.
 
-### Enterprise — $997/mo
-- Unlimited AI agents
-- All channels
-- Custom workflows
-- Priority support
-- White-label option
-- Dedicated account management
+### What if a client churns?
+We provide churn prevention tools — automated check-ins, performance reports, and upsell prompts. But client retention is ultimately your relationship to manage.
 
-### Reseller — $1,497/mo
-- Everything in Enterprise
-- Resell rights
-- Keep 100% commission on sub-clients
-- Reseller dashboard
-- Sales training materials
+### Do I need a Stripe account?
+Yes, for collecting payments. Stripe is free to create and charges standard processing fees (2.9% + $0.30 per transaction).
 
-## Target Niches
+### How many clients can one server handle?
+A basic VPS ($10-20/mo) handles 5-10 clients. A mid-range server ($30-50/mo) handles 20+ clients comfortably.
 
-CashClaw comes with niche-specific outreach templates and demo configurations:
-
-| Niche | Why They Need AI | Avg Deal Value |
-|-------|-----------------|----------------|
-| Real Estate | Miss leads after hours, 78% go to first responder | $8,000-15,000/commission |
-| Med Spas | Can't book consultations at 9pm, high LTV clients | $2,000-5,000/client |
-| Roofing/HVAC | On job sites, miss calls, "never called back" reviews | $3,000-15,000/job |
-| Law Firms | Intake is everything, voicemail = lost case | $5,000-50,000/case |
-| Gyms | 67% of inquiries die in inbox within 4 hours | $600-1,200/year LTV |
-| Dental | Appointment-heavy, insurance questions, recall reminders | $2,000-4,000/patient LTV |
-| Auto Dealers | High volume, test drive booking, follow-up critical | $1,500-3,000/sale |
-| Insurance | Quote requests 24/7, policy questions never stop | $500-2,000/policy |
-
-## Available Skills
-
-| Skill | Purpose |
-|-------|---------|
-| `cashclaw-core` | Business brain — orchestrates the entire sales pipeline |
-| `cashclaw-lead-finder` | Finds and scores local businesses that need AI agents |
-| `cashclaw-outreach` | Sends personalized sales messages with follow-up sequences |
-| `cashclaw-demo-builder` | Creates live demos tailored to each prospect's niche |
-| `cashclaw-agent-deployer` | Deploys and configures AI agents for paying clients |
-| `cashclaw-agent-support` | Monitors agents, sends performance reports, handles support |
-| `cashclaw-invoicer` | Stripe subscriptions, setup fees, recurring billing |
-
-## Commands
-
-```bash
-# Setup & Status
-cashclaw init                                # Interactive setup wizard
-cashclaw status                              # Pipeline, MRR, active clients
-cashclaw dashboard [-p PORT] [--no-open]     # Launch web dashboard
-
-# Pipeline
-cashclaw missions list [--status STATUS]     # List all pipeline items
-cashclaw missions create <template> -c NAME  # Create from template
-cashclaw missions start <id>                 # Move to next stage
-cashclaw missions complete <id>              # Mark complete
-cashclaw missions show <id>                  # View details
-
-# Earnings
-cashclaw earnings [-n LIMIT]                 # MRR, revenue, breakdown
-
-# Config
-cashclaw config show                         # View config
-cashclaw config set <key> <value>            # Update setting
-
-# Skills
-cashclaw skills [--install]                  # List/install skills
-```
-
-## Mission Templates
-
-```bash
-cashclaw missions create business-assessment -c "Bright Smile Dental"
-cashclaw missions create outreach-campaign-20 -c "Austin Real Estate"
-cashclaw missions create agent-demo-session -c "Peak Roofing"
-cashclaw missions create agent-starter-deploy -c "FitZone Gym"
-cashclaw missions create agent-pro-deploy -c "Chen Law Group"
-```
-
-## Dashboard
-
-```bash
-cashclaw dashboard
-```
-
-Opens a local web dashboard showing:
-- Pipeline funnel (prospects → demos → quotes → clients)
-- MRR and revenue trends
-- Active client list with agent status
-- Outreach tracking and response rates
-- Upcoming follow-ups and renewals
+---
 
 ## The Math
 
 ```
-10 prospects contacted per day
-= 200 per month
-× 5% demo rate = 10 demos
-× 30% close rate = 3 new clients
-× $597 avg monthly = $1,791 new MRR
+You charge: $597/mo per client
+Your server cost: ~$20/mo (handles 10 clients)
+Your platform fee: see web3sonic.com/ai-workforce
 
-Month 1: $1,791 MRR
-Month 3: $5,373 MRR
-Month 6: $10,746 MRR
-Month 12: $21,492 MRR ($257K ARR)
+5 clients:  $2,985/mo revenue  — $35,820/year
+10 clients: $5,970/mo revenue  — $71,640/year
+20 clients: $11,940/mo revenue — $143,280/year
 
-All from an AI agent that works while you sleep.
+Your AI agents work 24/7. No salaries. No sick days. No drama.
+You build the client list. The agents do the rest.
 ```
-
-## License
-
-MIT — do whatever you want with it.
 
 ---
 
-**Your next sales rep isn't human. It's AI.**
+## Ready?
+
+<p align="center">
+  <a href="https://web3sonic.com/ai-workforce"><strong>Get started at web3sonic.com/ai-workforce</strong></a>
+</p>
+
+---
+
+**Your next employee isn't human. It's AI. And your clients will pay you monthly for it.**
