@@ -1,0 +1,26 @@
+{
+  "template": "outreach-campaign-20",
+  "service_type": "outreach",
+  "tier": "standard",
+  "name": "Outreach Campaign (20 Businesses)",
+  "description": "Research and contact 20 local businesses in a target niche. Personalized messages, follow-up sequences, and response tracking.",
+  "default_price_usd": 0,
+  "estimated_hours": 4,
+  "skills_required": [
+    "cashclaw-lead-finder",
+    "cashclaw-outreach"
+  ],
+  "deliverables": [
+    "prospect-list.csv",
+    "outreach-log.jsonl"
+  ],
+  "steps": [
+    "Select target niche and location",
+    "Research and score 25+ businesses",
+    "Filter to top 20 prospects (score 6+)",
+    "Personalize outreach message for each",
+    "Send initial outreach (max 20/day)",
+    "Log all outreach in ledger",
+    "Schedule Day 3 and Day 7 follow-ups"
+  ]
+}

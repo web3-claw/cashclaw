@@ -20,7 +20,7 @@ const SERVICE_MAP = {
 
 export async function runInit() {
   console.log(orange.bold('\n  CashClaw Setup Wizard\n'));
-  console.log(dim('  Let\'s configure your AI agent as a freelance business.\n'));
+  console.log(dim('  Let\'s configure your AI agent as a AI agent workforce business.\n'));
 
   const config = getDefaultConfig();
 
@@ -121,7 +121,7 @@ export async function runInit() {
       choices: [
         { name: 'SEO Audit          - Automated site audits ($9-$59)', value: 'seo_audit', checked: true },
         { name: 'Content Writing    - Blog posts & newsletters ($5-$12)', value: 'content_writing', checked: true },
-        { name: 'Lead Generation    - Targeted lead lists ($9-$25)', value: 'lead_generation' },
+        { name: 'Lead Generation    - Targeted prospect lists ($9-$25)', value: 'lead_generation' },
         { name: 'WhatsApp Mgmt      - Setup & automation ($19-$49)', value: 'whatsapp_management' },
         { name: 'Social Media       - Content & scheduling ($9-$49)', value: 'social_media' },
       ],

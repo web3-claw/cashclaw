@@ -1,0 +1,30 @@
+{
+  "template": "agent-pro-deploy",
+  "service_type": "deployment",
+  "tier": "pro",
+  "name": "Pro AI Agent Deployment",
+  "description": "Deploy 2 AI agents across multiple channels with appointment booking, CRM integration, and follow-up sequences.",
+  "default_price_usd": 1096,
+  "estimated_hours": 24,
+  "skills_required": [
+    "cashclaw-agent-deployer"
+  ],
+  "deliverables": [
+    "deployment-config.json",
+    "integration-guide.pdf",
+    "client-guide.pdf"
+  ],
+  "steps": [
+    "Collect business info, FAQ, services, and pricing",
+    "Configure 2 AI agents with specialized roles",
+    "Set up web chat + WhatsApp + SMS channels",
+    "Configure appointment booking system",
+    "Integrate with client CRM (HubSpot/GHL/etc)",
+    "Set up automated follow-up sequences",
+    "Test all channels and integrations end-to-end",
+    "Load test (5 simultaneous conversations)",
+    "Deploy to production",
+    "Send comprehensive client guide",
+    "Schedule Day 7 performance review"
+  ]
+}

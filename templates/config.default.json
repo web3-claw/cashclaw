@@ -16,50 +16,43 @@
     "host": "localhost"
   },
   "services": {
-    "seo_audit": {
-      "enabled": false,
+    "ai_agent_starter": {
+      "enabled": true,
       "pricing": {
-        "basic": 9,
-        "standard": 29,
-        "pro": 59
+        "setup": 199,
+        "monthly": 297
       },
-      "description": "Automated SEO audits with actionable recommendations"
+      "description": "1 AI agent, 1 channel, lead capture, auto-responses"
     },
-    "content_writing": {
-      "enabled": false,
+    "ai_agent_pro": {
+      "enabled": true,
       "pricing": {
-        "post_500": 5,
-        "post_1500": 12,
-        "newsletter": 9
+        "setup": 499,
+        "monthly": 597
       },
-      "description": "AI-powered blog posts, articles, and newsletters"
+      "description": "2 AI agents, multi-channel, appointment booking, CRM integration"
     },
-    "lead_generation": {
-      "enabled": false,
+    "ai_agent_enterprise": {
+      "enabled": true,
       "pricing": {
-        "starter_25": 9,
-        "standard_50": 15,
-        "pro_100": 25
+        "setup": 999,
+        "monthly": 997
       },
-      "description": "Targeted lead lists with contact info and scoring"
+      "description": "Unlimited agents, all channels, custom workflows, white-label"
     },
-    "whatsapp_management": {
-      "enabled": false,
+    "ai_agent_reseller": {
+      "enabled": true,
       "pricing": {
-        "setup": 19,
-        "monthly": 49
+        "setup": 1499,
+        "monthly": 1497
       },
-      "description": "WhatsApp Business setup and automated responses"
-    },
-    "social_media": {
-      "enabled": false,
-      "pricing": {
-        "weekly_1": 9,
-        "weekly_3": 19,
-        "monthly_full": 49
-      },
-      "description": "Social media content creation and scheduling"
+      "description": "Everything + resell rights, keep 100% commission"
     }
+  },
+  "addons": {
+    "custom_training": 299,
+    "crm_integration": 199,
+    "additional_channel": 99
   },
   "hyrve": {
     "api_url": "https://api.hyrveai.com/v1",
@@ -72,12 +65,36 @@
     "auto_detected": false
   },
   "heartbeat": {
-    "enabled": false,
+    "enabled": true,
     "interval_ms": 60000
+  },
+  "outreach": {
+    "max_per_day": 20,
+    "follow_up_days": [
+      3,
+      7,
+      14,
+      30
+    ],
+    "target_niches": [
+      "real_estate",
+      "med_spa",
+      "roofing",
+      "law_firm",
+      "gym",
+      "dental",
+      "auto_dealer",
+      "insurance",
+      "restaurant",
+      "property_mgmt"
+    ]
   },
   "stats": {
     "total_missions": 0,
     "completed_missions": 0,
-    "total_earned": 0
+    "total_earned": 0,
+    "mrr": 0,
+    "active_clients": 0,
+    "agents_deployed": 0
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "cashclaw",
-  "version": "1.0.2",
-  "description": "Turn your OpenClaw into a money-making machine",
+  "version": "2.0.0",
+  "description": "Deploy and sell AI agent workforces to local businesses",
   "type": "module",
   "bin": {
     "cashclaw": "./bin/cashclaw.js"
@@ -29,17 +29,19 @@
     "openclaw",
     "cashclaw",
     "ai-agent",
-    "freelance",
-    "monetization",
-    "stripe",
-    "autonomous",
-    "hyrve"
+    "ai-workforce",
+    "local-business",
+    "saas",
+    "recurring-revenue",
+    "lead-generation",
+    "automation",
+    "stripe"
   ],
   "author": "Ertugrul Akben <i@ertugrulakben.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ertugrulakben/cashclaw"
+    "url": "https://github.com/web3-claw/cashclaw"
   },
-  "homepage": "https://cashclawai.com"
+  "homepage": "https://github.com/web3-claw/cashclaw"
 }

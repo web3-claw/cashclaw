@@ -1,0 +1,26 @@
+{
+  "template": "agent-starter-deploy",
+  "service_type": "deployment",
+  "tier": "starter",
+  "name": "Starter AI Agent Deployment",
+  "description": "Deploy a single AI agent on one channel for a local business. Includes FAQ training, lead capture, and basic auto-responses.",
+  "default_price_usd": 496,
+  "estimated_hours": 12,
+  "skills_required": [
+    "cashclaw-agent-deployer"
+  ],
+  "deliverables": [
+    "deployment-config.json",
+    "client-guide.pdf"
+  ],
+  "steps": [
+    "Collect business info and FAQ from client",
+    "Configure AI agent identity and knowledge base",
+    "Set up web chat widget OR WhatsApp channel",
+    "Configure lead capture and notifications",
+    "Test 10 common customer scenarios",
+    "Deploy to production",
+    "Send access credentials to client",
+    "Schedule Day 7 performance review"
+  ]
+}

@@ -1,44 +1,41 @@
 <p align="center">
-  <img src="cover.jpeg" alt="CashClaw - Turn Your AI Agent Into a Money-Making Machine" width="100%" />
+  <img src="cover.jpeg" alt="CashClaw - AI Agent Workforce for Local Businesses" width="100%" />
 </p>
 
 <p align="center">
   <a href="#what-is-cashclaw">What is CashClaw?</a> &middot;
   <a href="#quick-start">Quick Start</a> &middot;
   <a href="#how-it-works">How It Works</a> &middot;
-  <a href="#available-services">Services</a> &middot;
+  <a href="#service-tiers">Tiers</a> &middot;
+  <a href="#target-niches">Niches</a> &middot;
   <a href="#dashboard">Dashboard</a> &middot;
-  <a href="#commands">Commands</a> &middot;
-  <a href="#hyrveai-integration">HYRVEai</a>
+  <a href="#commands">Commands</a>
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/cashclaw"><img src="https://img.shields.io/npm/v/cashclaw?color=crimson&label=npm" alt="npm version" /></a>
-  <a href="https://github.com/ertugrulakben/cashclaw/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="license" /></a>
-  <a href="https://github.com/ertugrulakben/cashclaw/stargazers"><img src="https://img.shields.io/github/stars/ertugrulakben/cashclaw?style=social" alt="stars" /></a>
-  <a href="https://hyrveai.com"><img src="https://img.shields.io/badge/powered%20by-HYRVEai-ff6b35" alt="HYRVEai" /></a>
+  <a href="https://github.com/web3-claw/cashclaw/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="license" /></a>
+  <a href="https://github.com/web3-claw/cashclaw/stargazers"><img src="https://img.shields.io/github/stars/web3-claw/cashclaw?style=social" alt="stars" /></a>
 </p>
 
 ---
 
-> *"I deployed CashClaw on Friday. By Monday, my agent had completed 12 missions and earned $847."*
->
-> -- Early beta tester
+> *"We deployed CashClaw on Monday. By Friday, we had 3 demos booked and closed our first $597/mo client."*
 
 ---
 
 ## What is CashClaw?
 
-CashClaw is a set of **OpenClaw skills** that turn your AI agent into a freelance business operator.
+CashClaw is a set of **OpenClaw skills** that turn your AI agent into a **local business sales machine**.
 
-Your agent wakes up. Checks the pipeline. Picks up a client request. Runs an SEO audit. Writes a blog post. Generates 50 qualified leads. Creates a Stripe invoice. Sends a payment link. Follows up three days later. Collects the money.
+Your agent finds local businesses that need AI. Sends personalized outreach. Books demos. Closes deals. Deploys AI agents for clients. Collects payment. Manages recurring subscriptions. Sends performance reports. Upsells. Handles support.
 
-**You sleep. CashClaw works.**
+**You build the machine once. CashClaw sells for you.**
 
-It is not a framework. It is not a SaaS dashboard. It is a skill pack that plugs into any OpenClaw-compatible agent and gives it the ability to sell, deliver, and collect payment for digital services -- autonomously.
+It is not a SaaS. It is not a dashboard. It is a skill pack that plugs into any OpenClaw-compatible agent and gives it the ability to **prospect, sell, deploy, and manage AI agent workforces** for local businesses — autonomously.
 
 ```
-No employees. No overhead. No invoicing headaches.
+No cold calling. No manual demos. No invoicing headaches.
 Just an agent, a Stripe account, and CashClaw.
 ```
 
@@ -48,228 +45,181 @@ Just an agent, a Stripe account, and CashClaw.
 npx cashclaw init
 ```
 
-That is it. CashClaw will:
+CashClaw will:
 
 1. Create your `~/.cashclaw/` workspace
-2. Set up the mission pipeline
-3. Connect to Stripe (optional, you can add it later)
+2. Set up the sales pipeline
+3. Connect to Stripe (optional, add later)
 4. Install all 7 skills into your OpenClaw agent
 5. Print your first dashboard
 
 ```bash
 # Or install globally
 npm install -g cashclaw
-
-# Initialize workspace
 cashclaw init
-
-# Check status
-cashclaw status
-
-# Run your first audit
-cashclaw audit --url "https://your-client.com" --tier standard
 ```
 
 ## How It Works
 
-```
-+------------------+     +---------------------+     +------------------+
-|                  |     |                     |     |                  |
-|    OpenClaw      |---->|   CashClaw Skills   |---->|  CashClaw Engine |
-|    (Your Agent)  |     |   (7 skill packs)   |     |  (Orchestrator)  |
-|                  |     |                     |     |                  |
-+------------------+     +---------------------+     +--------+---------+
-                                                              |
-                                                              v
-                                                     +--------+---------+
-                                                     |                  |
-                                                     |     Stripe       |
-                                                     |   (Payments)     |
-                                                     |                  |
-                                                     +--------+---------+
-                                                              |
-                                                              v
-                                                     +--------+---------+
-                                                     |                  |
-                                                     |    HYRVEai      |
-                                                     |  (Marketplace)   |
-                                                     |                  |
-                                                     +------------------+
-```
-
-| Layer | What It Does |
-|-------|-------------|
-| **OpenClaw** | Your AI agent runtime. Reads SKILL.md files, executes instructions. |
-| **CashClaw Skills** | 7 specialized skill packs (SEO, content, leads, invoicing, etc.). |
-| **CashClaw Engine** | The `cashclaw-core` skill that orchestrates the mission lifecycle. |
-| **Stripe** | Payment processing. Invoices, payment links, subscriptions, refunds. |
-| **HYRVEai** | Optional marketplace where clients discover and hire CashClaw agents. |
-
-## Available Services
-
-Every service has transparent, fixed pricing. No hourly rates. No surprises.
-
-| Service | Skill | Starter | Standard | Pro |
-|---------|-------|---------|----------|-----|
-| SEO Audit | `cashclaw-seo-auditor` | $9 | $29 | $59 |
-| Blog Post (500w) | `cashclaw-content-writer` | $5 | -- | -- |
-| Blog Post (1500w) | `cashclaw-content-writer` | -- | $12 | -- |
-| Email Newsletter | `cashclaw-content-writer` | $9 | -- | -- |
-| Lead Generation (25) | `cashclaw-lead-generator` | $9 | -- | -- |
-| Lead Generation (50) | `cashclaw-lead-generator` | -- | $15 | -- |
-| Lead Generation (100) | `cashclaw-lead-generator` | -- | -- | $25 |
-| WhatsApp Setup | `cashclaw-whatsapp-manager` | $19 | -- | -- |
-| WhatsApp Monthly | `cashclaw-whatsapp-manager` | -- | $49/mo | -- |
-| Social Media (1 platform) | `cashclaw-social-media` | $9/wk | -- | -- |
-| Social Media (3 platforms) | `cashclaw-social-media` | -- | $19/wk | -- |
-| Social Media (Full) | `cashclaw-social-media` | -- | -- | $49/mo |
-
-**Custom packages available.** Combine services or request enterprise pricing.
-
-## Dashboard
-
-CashClaw tracks everything. Check your numbers anytime:
-
-```bash
-cashclaw status
-```
+### The Sales Pipeline
 
 ```
-  CashClaw Dashboard
-  ==================
-
-  Today          $58    |  3 missions completed
-  This Week     $247    |  9 missions completed
-  This Month    $847    | 31 missions completed
-  All Time    $2,340    | 84 missions completed
-
-  Active Missions
-  ---------------
-  MISSION-20260223-014  SEO Audit (Pro)       EXECUTE    $59
-  MISSION-20260223-015  Lead Gen (50)         DELIVER    $15
-  MISSION-20260223-016  Blog Post (1500w)     QUOTE      $12
-
-  Pending Payments
-  ----------------
-  INV-0042  $29   Due Feb 28   client@acme.com
-  INV-0043  $49   Due Mar 01   hello@startup.io
+PROSPECT → OUTREACH → DEMO → QUOTE → ACCEPT → DEPLOY → ONBOARD → RETAIN
 ```
+
+1. **Prospect**: CashClaw finds local businesses that need AI agents (no chatbot, slow response, phone-only contact)
+2. **Outreach**: Sends personalized sales messages with niche-specific pain points
+3. **Demo**: Builds a live demo tailored to the prospect's business
+4. **Quote**: Sends a professional proposal with ROI projection
+5. **Accept**: Collects payment via Stripe (setup fee + first month)
+6. **Deploy**: Configures and deploys AI agents for the client's business
+7. **Onboard**: Walks client through their new AI agent, monitors first week
+8. **Retain**: Monthly performance reports, recurring billing, upsells
+
+### Revenue Model
+
+| What | Amount |
+|------|--------|
+| Starter Setup Fee | $199 (one-time) |
+| Starter Monthly | $297/mo |
+| Pro Setup Fee | $499 (one-time) |
+| Pro Monthly | $597/mo |
+| Enterprise Setup Fee | $999 (one-time) |
+| Enterprise Monthly | $997/mo |
+| Reseller Setup Fee | $1,499 (one-time) |
+| Reseller Monthly | $1,497/mo |
+
+**5 Pro clients = $2,985 MRR = $35,820/year**
+
+## Service Tiers
+
+### Starter — $297/mo
+- 1 AI agent
+- 1 channel (web chat OR WhatsApp)
+- Lead capture & auto-responses
+- Basic FAQ handling
+- Email notifications for new leads
+
+### Pro — $597/mo
+- 2 AI agents
+- Multi-channel (web + WhatsApp + SMS)
+- Appointment booking
+- CRM integration
+- Follow-up sequences
+- Weekly performance reports
+
+### Enterprise — $997/mo
+- Unlimited AI agents
+- All channels
+- Custom workflows
+- Priority support
+- White-label option
+- Dedicated account management
+
+### Reseller — $1,497/mo
+- Everything in Enterprise
+- Resell rights
+- Keep 100% commission on sub-clients
+- Reseller dashboard
+- Sales training materials
+
+## Target Niches
+
+CashClaw comes with niche-specific outreach templates and demo configurations:
+
+| Niche | Why They Need AI | Avg Deal Value |
+|-------|-----------------|----------------|
+| Real Estate | Miss leads after hours, 78% go to first responder | $8,000-15,000/commission |
+| Med Spas | Can't book consultations at 9pm, high LTV clients | $2,000-5,000/client |
+| Roofing/HVAC | On job sites, miss calls, "never called back" reviews | $3,000-15,000/job |
+| Law Firms | Intake is everything, voicemail = lost case | $5,000-50,000/case |
+| Gyms | 67% of inquiries die in inbox within 4 hours | $600-1,200/year LTV |
+| Dental | Appointment-heavy, insurance questions, recall reminders | $2,000-4,000/patient LTV |
+| Auto Dealers | High volume, test drive booking, follow-up critical | $1,500-3,000/sale |
+| Insurance | Quote requests 24/7, policy questions never stop | $500-2,000/policy |
+
+## Available Skills
+
+| Skill | Purpose |
+|-------|---------|
+| `cashclaw-core` | Business brain — orchestrates the entire sales pipeline |
+| `cashclaw-lead-finder` | Finds and scores local businesses that need AI agents |
+| `cashclaw-outreach` | Sends personalized sales messages with follow-up sequences |
+| `cashclaw-demo-builder` | Creates live demos tailored to each prospect's niche |
+| `cashclaw-agent-deployer` | Deploys and configures AI agents for paying clients |
+| `cashclaw-agent-support` | Monitors agents, sends performance reports, handles support |
+| `cashclaw-invoicer` | Stripe subscriptions, setup fees, recurring billing |
 
 ## Commands
 
 ```bash
-# Core
-cashclaw init                    # Initialize workspace
-cashclaw status                  # Show dashboard
-cashclaw missions                # List all missions
-cashclaw mission <id>            # Show mission details
+# Setup & Status
+cashclaw init                                # Interactive setup wizard
+cashclaw status                              # Pipeline, MRR, active clients
+cashclaw dashboard [-p PORT] [--no-open]     # Launch web dashboard
 
-# SEO
-cashclaw audit --url <URL>       # Run SEO audit
-cashclaw audit --url <URL> --tier pro --output report.md
+# Pipeline
+cashclaw missions list [--status STATUS]     # List all pipeline items
+cashclaw missions create <template> -c NAME  # Create from template
+cashclaw missions start <id>                 # Move to next stage
+cashclaw missions complete <id>              # Mark complete
+cashclaw missions show <id>                  # View details
 
-# Content
-cashclaw content --type blog --words 1500 --keyword "topic"
-cashclaw content --type newsletter --topic "monthly update"
-cashclaw content --type social --platform instagram --posts 5
+# Earnings
+cashclaw earnings [-n LIMIT]                 # MRR, revenue, breakdown
 
-# Leads
-cashclaw leads --icp "saas,10-50,US" --count 50
-cashclaw leads --query "ecommerce startups" --output leads.json
+# Config
+cashclaw config show                         # View config
+cashclaw config set <key> <value>            # Update setting
 
-# WhatsApp
-cashclaw whatsapp setup --config profile.yaml
-cashclaw whatsapp templates --count 10 --industry "restaurant"
-
-# Social Media
-cashclaw social --platform linkedin --type weekly
-cashclaw social --platforms all --type monthly
-cashclaw social analytics --period "2026-02"
-
-# Invoicing
-cashclaw invoice --client "email" --amount 29 --service "SEO Audit"
-cashclaw invoice --list --status unpaid
-cashclaw invoice --remind --overdue
-cashclaw invoice --refund --invoice "in_xxxxx"
-
-# Configuration
-cashclaw config                  # Show current config
-cashclaw config --stripe-key     # Set Stripe API key
-cashclaw config --currency usd   # Set default currency
+# Skills
+cashclaw skills [--install]                  # List/install skills
 ```
 
-## HYRVEai Integration
-
-[HYRVEai](https://hyrveai.com) is the marketplace where CashClaw agents find clients.
+## Mission Templates
 
 ```bash
-# Connect to HYRVEai
-cashclaw hyrve connect --api-key <YOUR_KEY>
-
-# List available gigs
-cashclaw hyrve gigs
-
-# Accept a gig
-cashclaw hyrve accept --gig <GIG_ID>
-
-# Submit completed work
-cashclaw hyrve deliver --gig <GIG_ID> --files deliverables/
+cashclaw missions create business-assessment -c "Bright Smile Dental"
+cashclaw missions create outreach-campaign-20 -c "Austin Real Estate"
+cashclaw missions create agent-demo-session -c "Peak Roofing"
+cashclaw missions create agent-starter-deploy -c "FitZone Gym"
+cashclaw missions create agent-pro-deploy -c "Chen Law Group"
 ```
 
-When connected to HYRVEai, your agent automatically:
+## Dashboard
 
-1. **Receives** new mission requests from the marketplace.
-2. **Quotes** based on your configured pricing.
-3. **Executes** using CashClaw skills.
-4. **Delivers** through the HYRVEai platform.
-5. **Gets paid** via HYRVEai's escrow system.
-
-No cold outreach needed. Clients come to you.
-
-## Project Structure
-
-```
-cashclaw/
-  bin/                           # CLI entry point
-  src/                           # Core engine source
-  skills/
-    cashclaw-core/               # Business orchestration brain
-    cashclaw-seo-auditor/        # SEO audit skill + scripts
-    cashclaw-content-writer/     # Content creation skill
-    cashclaw-lead-generator/     # Lead research skill + scripts
-    cashclaw-whatsapp-manager/   # WhatsApp automation skill
-    cashclaw-social-media/       # Social media management skill
-    cashclaw-invoicer/           # Stripe payment skill + scripts
-  templates/                     # Message and report templates
-  missions/                      # Example mission files
-  tests/                         # Test suite
-  package.json
-  LICENSE
-  README.md
+```bash
+cashclaw dashboard
 ```
 
-## Built By
+Opens a local web dashboard showing:
+- Pipeline funnel (prospects → demos → quotes → clients)
+- MRR and revenue trends
+- Active client list with agent status
+- Outreach tracking and response rates
+- Upcoming follow-ups and renewals
 
-Built by [Ertugrul Akben](https://github.com/ertugrulakben) and the team at [HYRVEai](https://hyrveai.com).
+## The Math
 
-CashClaw exists because AI agents should not just answer questions -- they should run businesses.
+```
+10 prospects contacted per day
+= 200 per month
+× 5% demo rate = 10 demos
+× 30% close rate = 3 new clients
+× $597 avg monthly = $1,791 new MRR
 
-## Contributing
+Month 1: $1,791 MRR
+Month 3: $5,373 MRR
+Month 6: $10,746 MRR
+Month 12: $21,492 MRR ($257K ARR)
 
-CashClaw is open source. PRs are welcome.
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/new-skill`)
-3. Write your skill following the OpenClaw SKILL.md format
-4. Add tests
-5. Submit a PR
+All from an AI agent that works while you sleep.
+```
 
 ## License
 
-[MIT](LICENSE) -- Use it, fork it, make money with it.
+MIT — do whatever you want with it.
 
 ---
 
-<p align="center">
-  <sub>Stop prompting. Start profiting.</sub>
-</p>
+**Your next sales rep isn't human. It's AI.**

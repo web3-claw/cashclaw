@@ -121,7 +121,7 @@ export async function listInstalledSkills(configOverride = null) {
 /**
  * Install CashClaw skills into the OpenClaw workspace.
  * Copies skill directories from cashclaw/skills/ to the OpenClaw skills folder.
- * @param {string[]} skillNames - Array of skill folder names (e.g. ['cashclaw-seo-auditor'])
+ * @param {string[]} skillNames - Array of skill folder names (e.g. ['cashclaw-lead-finder'])
  * @param {string} configOverride - Optional explicit skills dir path
  * @returns {object} Installation results
  */

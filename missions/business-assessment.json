@@ -1,0 +1,24 @@
+{
+  "template": "business-assessment",
+  "service_type": "assessment",
+  "tier": "free",
+  "name": "Free AI Readiness Assessment",
+  "description": "Evaluate a local business's AI readiness: website analysis, response time audit, lead capture gaps, and ROI projection. Used to warm up prospects before the sales pitch.",
+  "default_price_usd": 0,
+  "estimated_hours": 0.5,
+  "skills_required": [
+    "cashclaw-lead-finder"
+  ],
+  "deliverables": [
+    "assessment-report.md",
+    "roi-calculator.md"
+  ],
+  "steps": [
+    "Research the business (website, reviews, social media)",
+    "Audit current lead capture methods",
+    "Test response time (if possible)",
+    "Identify top 3 pain points",
+    "Calculate ROI projection for AI agent",
+    "Generate assessment report with recommendations"
+  ]
+}

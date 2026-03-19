@@ -1,0 +1,25 @@
+{
+  "template": "agent-demo-session",
+  "service_type": "demo",
+  "tier": "free",
+  "name": "Live Demo for Prospect",
+  "description": "Build and deliver a personalized live demo of an AI agent for a specific prospect's business niche.",
+  "default_price_usd": 0,
+  "estimated_hours": 1,
+  "skills_required": [
+    "cashclaw-demo-builder"
+  ],
+  "deliverables": [
+    "demo-bot-config.json",
+    "roi-calculator.md",
+    "leave-behind.pdf"
+  ],
+  "steps": [
+    "Research prospect's specific business and niche",
+    "Build demo bot with niche-specific FAQ",
+    "Create personalized ROI calculator",
+    "Prepare before/after walkthrough script",
+    "Deliver live demo to prospect",
+    "Send leave-behind PDF with demo link and pricing"
+  ]
+}
