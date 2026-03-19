@@ -3,6 +3,7 @@ import path from 'path';
 import os from 'os';
 import { v4 as uuidv4 } from 'uuid';
 import dayjs from 'dayjs';
+import { VERSION } from '../utils/version.js';
 
 const MISSIONS_DIR = path.join(os.homedir(), '.cashclaw', 'missions');
 
@@ -11,6 +12,20 @@ const MISSIONS_DIR = path.join(os.homedir(), '.cashclaw', 'missions');
  */
 async function ensureMissionsDir() {
   await fs.ensureDir(MISSIONS_DIR);
+}
+
+/**
+ * Add an entry to the mission's audit trail.
+ */
+function addTrailEntry(mission, action, details = '') {
+  if (!mission.audit_trail) {
+    mission.audit_trail = [];
+  }
+  mission.audit_trail.push({
+    action,
+    details,
+    timestamp: dayjs().toISOString(),
+  });
 }
 
 /**
@@ -54,11 +69,14 @@ export async function createMission(template, client = {}) {
       payment_link: null,
       paid_at: null,
     },
+    audit_trail: [],
     created_at: now,
     started_at: null,
     completed_at: null,
     updated_at: now,
   };
+
+  addTrailEntry(mission, 'mission_created', `Mission "${mission.name}" created for ${mission.client.name} — $${mission.price_usd}`);
 
   const missionPath = path.join(MISSIONS_DIR, `${id}.json`);
   await fs.writeJson(missionPath, mission, { spaces: 2 });
@@ -81,6 +99,8 @@ export async function startMission(id) {
   mission.status = 'in_progress';
   mission.started_at = dayjs().toISOString();
   mission.updated_at = dayjs().toISOString();
+
+  addTrailEntry(mission, 'mission_started', `Execution started — ${mission.steps.length} steps queued`);
 
   const missionPath = path.join(MISSIONS_DIR, `${id}.json`);
   await fs.writeJson(missionPath, mission, { spaces: 2 });
@@ -112,6 +132,9 @@ export async function completeMission(id) {
     }
   }
 
+  const completedSteps = mission.steps.filter((s) => s.status === 'completed').length;
+  addTrailEntry(mission, 'mission_completed', `All ${completedSteps} steps done — ready for invoicing ($${mission.price_usd})`);
+
   const missionPath = path.join(MISSIONS_DIR, `${id}.json`);
   await fs.writeJson(missionPath, mission, { spaces: 2 });
 
@@ -130,8 +153,11 @@ export async function cancelMission(id) {
     throw new Error(`Mission ${id} is already paid and cannot be cancelled`);
   }
 
+  const prevStatus = mission.status;
   mission.status = 'cancelled';
   mission.updated_at = dayjs().toISOString();
+
+  addTrailEntry(mission, 'mission_cancelled', `Mission cancelled (was: ${prevStatus})`);
 
   const missionPath = path.join(MISSIONS_DIR, `${id}.json`);
   await fs.writeJson(missionPath, mission, { spaces: 2 });
@@ -151,16 +177,95 @@ export async function updateMissionStep(id, stepIndex, status) {
     throw new Error(`Step ${stepIndex} not found in mission ${id}`);
   }
 
-  mission.steps[stepIndex].status = status;
+  const step = mission.steps[stepIndex];
+  const prevStatus = step.status;
+  step.status = status;
   if (status === 'completed') {
-    mission.steps[stepIndex].completed_at = dayjs().toISOString();
+    step.completed_at = dayjs().toISOString();
   }
   mission.updated_at = dayjs().toISOString();
+
+  addTrailEntry(mission, 'step_updated', `Step ${stepIndex + 1}: "${step.description}" — ${prevStatus} → ${status}`);
 
   const missionPath = path.join(MISSIONS_DIR, `${id}.json`);
   await fs.writeJson(missionPath, mission, { spaces: 2 });
 
   return mission;
+}
+
+/**
+ * Get the formatted audit trail for a mission.
+ */
+export async function getMissionTrail(id) {
+  const mission = await getMission(id);
+  if (!mission) {
+    throw new Error(`Mission not found: ${id}`);
+  }
+  return {
+    id: mission.id,
+    name: mission.name,
+    status: mission.status,
+    price_usd: mission.price_usd,
+    client: mission.client,
+    trail: mission.audit_trail || [],
+    steps: mission.steps,
+  };
+}
+
+/**
+ * Export mission proof as markdown.
+ */
+export async function exportMissionProof(id) {
+  const mission = await getMission(id);
+  if (!mission) {
+    throw new Error(`Mission not found: ${id}`);
+  }
+
+  const trail = mission.audit_trail || [];
+  const lines = [
+    `# Mission Proof — ${mission.name}`,
+    '',
+    `| Field | Value |`,
+    `|-------|-------|`,
+    `| **Mission ID** | \`${mission.id}\` |`,
+    `| **Service** | ${mission.service_type} (${mission.tier}) |`,
+    `| **Price** | $${mission.price_usd} |`,
+    `| **Client** | ${mission.client.name} (${mission.client.email || 'N/A'}) |`,
+    `| **Status** | ${mission.status} |`,
+    `| **Created** | ${mission.created_at} |`,
+    mission.started_at ? `| **Started** | ${mission.started_at} |` : null,
+    mission.completed_at ? `| **Completed** | ${mission.completed_at} |` : null,
+    '',
+    '## Steps',
+    '',
+  ].filter(Boolean);
+
+  for (const step of mission.steps) {
+    const icon = step.status === 'completed' ? '- [x]' : '- [ ]';
+    const time = step.completed_at ? ` (${dayjs(step.completed_at).format('HH:mm:ss')})` : '';
+    lines.push(`${icon} ${step.description}${time}`);
+  }
+
+  if (trail.length > 0) {
+    lines.push('', '## Audit Trail', '');
+    lines.push('| Time | Action | Details |');
+    lines.push('|------|--------|---------|');
+    for (const entry of trail) {
+      const time = dayjs(entry.timestamp).format('YYYY-MM-DD HH:mm:ss');
+      lines.push(`| ${time} | ${entry.action} | ${entry.details} |`);
+    }
+  }
+
+  if (mission.deliverables?.length > 0) {
+    lines.push('', '## Deliverables', '');
+    for (const d of mission.deliverables) {
+      lines.push(`- ${d}`);
+    }
+  }
+
+  lines.push('', '---', `*Generated by CashClaw v${VERSION} — ${dayjs().format('YYYY-MM-DD HH:mm:ss')}*`, '');
+
+  return lines.join('\n');
 }
 
 /**
@@ -180,7 +285,7 @@ export async function listMissions(statusFilter = null) {
         missions.push(mission);
       }
     } catch (err) {
-      // Skip corrupted files
+      console.warn(`[missions] Skipping corrupted mission file: ${file} (${err.message})`);
       continue;
     }
   }
